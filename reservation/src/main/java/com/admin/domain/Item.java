@@ -12,25 +12,29 @@ import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class User {
-    public User(){  }
+public class Item{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String account;
-
-    private String password;
-
     private String status;
 
-    private String email;
+    private String name;
 
-    private String phoneNumber;
+    private String title;
+
+    private String content;
+
+    private Integer price;
+
+    private String brandName;
 
     private LocalDateTime registeredAt;
 
@@ -43,4 +47,7 @@ public class User {
     private LocalDateTime updatedAt;
 
     private String updatedBy;
+
+    private Long partnerId;
+
 }
